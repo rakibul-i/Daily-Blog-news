@@ -8,7 +8,7 @@ const Header = () => {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Daily News
+            Daily Notes
           </Navbar.Brand>
           <Nav className="ms-auto d-flex justify-content-center align-items-center">
             <Nav.Link as={Link} to="/home">
