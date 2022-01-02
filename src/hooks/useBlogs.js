@@ -6,7 +6,7 @@ const useBlogs = () => {
   const loadBlogs = async (url) => {
     const response = await fetch(url);
     const data = await response.json();
-    setBlogs(data);
+    setBlogs(data.reverse());
   };
   useEffect(() => {
     loadBlogs("https://protected-eyrie-86885.herokuapp.com/blogs");

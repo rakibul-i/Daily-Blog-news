@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useBlogs from "../../../hooks/useBlogs";
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Daily Notes
+            Daily Blog News
           </Navbar.Brand>
           <Nav className="ms-auto d-flex justify-content-center align-items-center">
             <Nav.Link as={Link} to="/home">

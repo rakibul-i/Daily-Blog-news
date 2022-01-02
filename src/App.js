@@ -1,19 +1,19 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Shared/Header/Header";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Header></Header>
-        <Routes></Routes>
-        <Routes>
-          {/*            <Route path="/product/:productId" element={<ProductDetail/>}/>
-           */}{" "}
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <Switch>
+        <Route path="/home" component={Home} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </>
   );
 }
 export default App;
