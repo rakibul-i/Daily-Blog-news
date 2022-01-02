@@ -1,0 +1,204 @@
+/* ---------------------
+Design Starts from here 
+------------------------*/
+
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #be0505;
+  padding: 5px 0px;
+  color: white;
+}
+
+/* sign up button */
+
+.sign-up-btn {
+  background-color: #be0505;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 35px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sign-up-btn:hover {
+  border: 2px solid #be0505;
+  color: #be0505;
+  background-color: white;
+}
+
+/* main footer style */
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  padding: 50px 80px;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.87),
+      rgba(0, 0, 0, 0.712),
+      rgba(0, 0, 0, 0.856),
+      rgba(0, 0, 0, 0.815)
+    ),
+    url("https://ibb.co/zV1GSGP");
+  background-size: cover;
+  /* height:60vh; */
+  background-position: center;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-design {
+  font-weight: 700;
+  padding-right: 20px;
+}
+
+.footer-style {
+  margin-bottom: 0;
+}
+
+.footer-style-2 {
+  margin-top: 2px;
+}
+
+.footer-address {
+  padding-left: 70px;
+}
+
+/* social media style */
+
+.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-social-media {
+  padding-right: 100px;
+}
+
+.footer-social-media .fab {
+  color: #be0505;
+  font-size: 15px;
+  margin-left: 9px;
+}
+
+.footer-img {
+  width: 300px;
+  margin-left: 180px;
+}
+
+.copyright-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  font-size: 11px;
+  padding: 5px 90px;
+}
+
+/*--------------------
+  Media Query for Mobile
+---------------------- */
+
+@media only screen and (max-width: 688px) {
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .newsletter p {
+    text-align: center;
+  }
+
+  .main-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .footer-contact {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .footer-address {
+    padding-left: 78px;
+  }
+
+  .footer-design {
+    padding-right: 25px;
+  }
+
+  .copyright-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    font-size: 11px;
+    padding: 30px;
+  }
+
+  .footer-img {
+    width: 300px;
+    margin-left: 50px;
+  }
+}
+
+/*--------------------
+  Media Query for Ipad
+---------------------- */
+
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .main-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+}
+
+/* ---------------------
+Design ends from here 
+------------------------*/
