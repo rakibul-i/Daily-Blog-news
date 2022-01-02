@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -10,18 +10,21 @@ const Header = () => {
           <Navbar.Brand as={Link} to="/">
             Daily News
           </Navbar.Brand>
-          <Nav className="ms-auto">
+          <Nav className="ms-auto d-flex justify-content-center align-items-center">
             <Nav.Link as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/features">
+            <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="/pricing">
-              Health
+            <Nav.Link as={Link} to="/features">
+              Features
             </Nav.Link>
-            <Nav.Link as={Link} to="/fashion">
-              Fashion
+            <Nav.Link as={Link} to="/pricing">
+              Pricing
+            </Nav.Link>
+            <Nav.Link as={Link} to="/login">
+              <Button variant="outline-light">Login</Button>
             </Nav.Link>
           </Nav>
         </Container>
