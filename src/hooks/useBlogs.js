@@ -11,7 +11,7 @@ const useBlogs = () => {
   useEffect(() => {
     loadBlogs("https://protected-eyrie-86885.herokuapp.com/blogs");
   }, [blogs]);
-  return { blogs };
+  return { blogs, setBlogs };
 };
 
 export default useBlogs;

@@ -13,7 +13,9 @@ const Header = () => {
       >
         <Container className="py-2 ">
           <Navbar.Brand as={Link} to="/">
-            <h3 className="pt-2">Daily Blog News</h3>
+            <h3 className="pt-2 fw-bold">
+              <span className="text-info">Daily</span> <span>Blog</span>
+            </h3>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -31,7 +33,7 @@ const Header = () => {
                 Pricing
               </Nav.Link>
               <Nav.Link as={Link} to="/login">
-                <Button variant="outline-light">Login</Button>
+                <Button variant="outline-info">Login</Button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
