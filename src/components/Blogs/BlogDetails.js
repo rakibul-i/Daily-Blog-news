@@ -3,14 +3,17 @@ import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Footer from "../shared/footer/Footer";
 import Header from "../shared/Header/Header";
+import Comments from "./Comments";
+import MakeComment from "./MakeComment";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { blogs } = useAuth();
+  const { blogs, comments } = useAuth();
 
   const blog = blogs.find((b) => b._id === id);
-
   const time = blog?.time;
+
+  const blogComments = comments.data.filter((c) => c.blogId === id);
 
   return (
     <>
@@ -25,16 +28,16 @@ const BlogDetails = () => {
         </div>
         <p className="py-5">{blog?.description}</p>
 
-        {/* comment section */}
-        <div className="">
-          <h3>Comments</h3>
-          <form action="">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="enter your comment"
-            />
-          </form>
+        {/* add a comment  */}
+        <div className="border py-4 px-2">
+          <h3> {blogComments.length} Comments</h3>
+          <MakeComment id={id}></MakeComment>
+          {/* comments  */}
+          <div className="py-3 px-2">
+            {blogComments?.map((comment) => (
+              <Comments key={comment._id} comment={comment}></Comments>
+            ))}
+          </div>
         </div>
       </section>
       <Footer />

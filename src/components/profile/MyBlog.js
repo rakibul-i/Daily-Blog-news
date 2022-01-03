@@ -46,7 +46,7 @@ const MyBlog = (props) => {
           <div
             className={
               isOpen
-                ? "absolute top-8 bg-whit bg-blue-50 px-3 py-3 rounded right-2 block"
+                ? "absolute top-8 bg-whit bg-gray-700 px-3 py-3 rounded right-2 block"
                 : "hidden"
             }
           >
