@@ -11,6 +11,8 @@ import ReactLoading from "react-loading";
 import WriteBlog from "./components/profile/WriteBlog";
 import PrivateRoute from "./components/authentication/PrivateRoute";
 import MyBlogs from "./components/profile/MyBlogs";
+import AboutUs from "./components/pages/About";
+import Pricing from "./components/pages/Pricing";
 
 function App() {
   const { blogs } = useAuth();
@@ -38,6 +40,8 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/blogs/:id" component={BlogDetails} />
+        <Route path="/pricing" component={Pricing} />
+        <Route path="/about" component={AboutUs} />
         <Route path="/home" component={Home} />
         <Route exact path="/" component={Home} />
         <Route path="*" component={NotFound} />

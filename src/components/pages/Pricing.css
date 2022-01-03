@@ -1,0 +1,32 @@
+.free-table {
+  padding: 30px 50px;
+}
+
+.book-now-btn {
+  padding: 8px 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: #04aa6b;
+  color: white;
+}
+
+.book-now-btn:hover {
+  background-color: white;
+  color: #04aa6b;
+  border: 2px solid #04aa6b;
+}
+
+@media only screen and (max-width: 688px) {
+  .free-table {
+    padding: 20px 30px;
+  }
+
+  .book-now-btn {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    background-color: #04aa6b;
+    color: white;
+  }
+}
