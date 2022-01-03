@@ -8,6 +8,8 @@ import Home from "./components/pages/Home";
 import useAuth from "./hooks/useAuth";
 
 import ReactLoading from "react-loading";
+import WriteBlog from "./components/profile/WriteBlog";
+import PrivateRoute from "./components/authentication/PrivateRoute";
 
 function App() {
   const { blogs } = useAuth();
@@ -26,6 +28,9 @@ function App() {
   return (
     <>
       <Switch>
+        <PrivateRoute path="/writeBlog">
+          <WriteBlog />
+        </PrivateRoute>
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/blogs/:id" component={BlogDetails} />
