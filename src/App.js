@@ -10,6 +10,7 @@ import useAuth from "./hooks/useAuth";
 import ReactLoading from "react-loading";
 import WriteBlog from "./components/profile/WriteBlog";
 import PrivateRoute from "./components/authentication/PrivateRoute";
+import MyBlogs from "./components/profile/MyBlogs";
 
 function App() {
   const { blogs } = useAuth();
@@ -30,6 +31,9 @@ function App() {
       <Switch>
         <PrivateRoute path="/writeBlog">
           <WriteBlog />
+        </PrivateRoute>
+        <PrivateRoute path="/myBlogs">
+          <MyBlogs />
         </PrivateRoute>
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />

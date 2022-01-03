@@ -21,7 +21,10 @@ const RecentBlogs = () => {
           const blogTitle = blog?.title.slice(0, 30);
           const blogDesc = blog?.description.slice(0, 200);
           return (
-            <div className="grid  grid-cols-1 items-center p-4 m-3 border rounded ">
+            <div
+              key={blog._id}
+              className="grid  grid-cols-1 items-center p-4 m-3 border rounded "
+            >
               <div>
                 <img
                   className="rounded w-full  2xl:h-64 lg:h-48 md:h-44 h-64"

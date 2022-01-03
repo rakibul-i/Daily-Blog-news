@@ -1,7 +1,26 @@
 import React from "react";
+import useAuth from "../../hooks/useAuth";
+import Footer from "../shared/footer/Footer";
+import Header from "../shared/Header/Header";
+import MyBlog from "./MyBlog";
 
 const MyBlogs = () => {
-  return <section></section>;
+  const { blogs, currentUser } = useAuth();
+  const userBlogs = blogs.filter((blog) => blog?.email === currentUser?.email);
+  return (
+    <section>
+      <Header />
+      <div className="md:w-9/12 w-11/12 mx-auto py-10">
+        <span className="text-2xl font-bold py-2">My Blogs</span>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 pt-10">
+          {userBlogs.map((blog) => (
+            <MyBlog key={blog._id} blog={blog}></MyBlog>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </section>
+  );
 };
 
 export default MyBlogs;
