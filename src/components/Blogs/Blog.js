@@ -9,7 +9,7 @@ const Blog = (props) => {
   return (
     <div
       onClick={() => history.push(`/blogs/${props.blog._id}`)}
-      className="grid cursor-pointer border  grid-cols-1 transition-shadow duration-300 items-center hover:shadow-md py-2 px-4 m-3 rounded "
+      className="grid cursor-pointer border  grid-cols-1 transition-shadow duration-300 items-center hover:shadow-xl py-2 px-4 m-3 rounded "
     >
       <div>
         <img

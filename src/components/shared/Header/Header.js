@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
+  const { currentUser, logOut } = useAuth();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const isOpenHandler = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       <Navbar
         bg="dark"
-        className="d-flex align-items-center"
+        className="d-flex align-items-center relative"
         expand="lg"
         variant="dark"
       >
-        <Container className="py-2 ">
+        <Container className="py-2 relative">
           <Navbar.Brand as={Link} to="/">
             <h3 className="pt-2 fw-bold">
               <span className="text-info">Daily</span> <span>Blog</span>
@@ -19,7 +27,7 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto d-flex justify-content-center align-items-center">
+            <Nav className="ms-auto d-flex justify-content-center relative align-items-center">
               <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
@@ -32,9 +40,60 @@ const Header = () => {
               <Nav.Link as={Link} to="/pricing">
                 Pricing
               </Nav.Link>
-              <Nav.Link as={Link} to="/login">
-                <Button variant="outline-info">Login</Button>
-              </Nav.Link>
+              {currentUser ? (
+                <div className="relative">
+                  <button onClick={isOpenHandler}>
+                    <img
+                      className=" h-12 w-12 "
+                      src={currentUser?.photoURL}
+                      alt=""
+                      style={{ borderRadius: "30px" }}
+                    />
+                  </button>
+                  <div
+                    className={
+                      isOpen
+                        ? "bg-gray-900 absolute right-0 top-12 px-3 w-52 py-3 text-black rounded"
+                        : " hidden"
+                    }
+                  >
+                    <h1 className="text-center capitalize text-white font-bold text-xl p-2">
+                      {currentUser?.displayName}
+                    </h1>
+                    <Nav.Link
+                      as={Link}
+                      className="block text-center   bg-white text-black py-1 px-3 my-3"
+                      to="/myBlogs"
+                    >
+                      My Blogs
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      className="block text-center bg-white text-black py-1 px-3 my-3"
+                      to="/writeBlog"
+                    >
+                      Write a blog
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      className="block text-center bg-white text-black py-1 px-3 my-3"
+                      to="/review"
+                    >
+                      Rate Us
+                    </Nav.Link>
+                    <button
+                      onClick={logOut}
+                      className="bg-white block w-full px-3 py-1 rounded"
+                    >
+                      Log out
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <Nav.Link as={Link} to="/login">
+                  <Button variant="outline-info">Login</Button>
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
