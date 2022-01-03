@@ -13,7 +13,7 @@ const Blog = (props) => {
     >
       <div>
         <img
-          className="rounded w-full h-56"
+          className="rounded w-full 2xl:h-56 lg:h-44 md:h-48 h-56"
           src={props.blog?.blogImage}
           alt=""
         />

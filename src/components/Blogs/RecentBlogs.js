@@ -24,7 +24,7 @@ const RecentBlogs = () => {
             <div className="grid  grid-cols-1 items-center p-4 m-3 border rounded ">
               <div>
                 <img
-                  className="rounded w-full h-64"
+                  className="rounded w-full  2xl:h-64 lg:h-48 md:h-44 h-64"
                   src={blog?.blogImage}
                   alt=""
                 />
