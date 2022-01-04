@@ -7,6 +7,7 @@ import useAuth from "../../hooks/useAuth";
 import Footer from "../shared/footer/Footer";
 import Header from "../shared/Header/Header";
 import { FaStar } from "react-icons/fa";
+import Helmet from "react-helmet";
 
 const colors = {
   orange: "#FFBA5A",
@@ -55,6 +56,12 @@ const Review = () => {
   };
   return (
     <section>
+      {/* makeing seo */}
+      <Helmet>
+        <title>Write a review</title>
+        <meta name="description" content="review page" />
+      </Helmet>
+      {/* seo ends  */}
       <Header />
       <div className="md:w-9/12 w-11/12 mx-auto py-5">
         <h3>

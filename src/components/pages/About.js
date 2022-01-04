@@ -3,10 +3,15 @@ import "./about.css";
 import Button from "@restart/ui/esm/Button";
 import Header from "../shared/Header/Header";
 import Footer from "../shared/footer/Footer";
+import Helmet from "react-helmet";
 
 const AboutUs = () => {
   return (
     <section>
+      <Helmet>
+        <title>About Us</title>
+        <meta name="description" content="about us page" />
+      </Helmet>
       <Header />
       <div className="md:w-9/12 w-11/12 mx-auto">
         <div className="about-us">

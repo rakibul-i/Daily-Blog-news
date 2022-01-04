@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import Footer from "../shared/footer/Footer";
 import Header from "../shared/Header/Header";
 import "./Features.css";
@@ -7,6 +8,12 @@ const Features = () => {
   return (
     // container starts from here
     <section>
+      {/* makeing seo */}
+      <Helmet>
+        <title>Features </title>
+        <meta name="description" content="features page" />
+      </Helmet>
+      {/* seo ends  */}
       <Header />
       <div className="md:w-9/12 w-11/12 mx-auto py-5">
         <div className="feature-container">

@@ -12,14 +12,14 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div className="py-5">
       <Navbar
         bg="dark"
-        className="d-flex align-items-center relative"
+        className="d-flex align-items-center relative fixed-top"
         expand="lg"
         variant="dark"
       >
-        <Container className="py-2 relative">
+        <Container className="py-2 relative ">
           <Navbar.Brand as={Link} to="/">
             <h3 className="pt-2 fw-bold">
               <span className="text-info">Daily</span> <span>Blog</span>

@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import Blogs from "../Blogs/Blogs";
 import RecentBlogs from "../Blogs/RecentBlogs";
 import Footer from "../shared/footer/Footer";
@@ -8,6 +9,10 @@ import Reviews from "../shared/Reviews";
 const Home = () => {
   return (
     <div>
+      <Helmet>
+        <title>Daily Blog News</title>
+        <meta name="description" content="home page" />
+      </Helmet>
       <Header />
       <RecentBlogs />
       <Blogs />

@@ -3,10 +3,17 @@ import "./Pricing.css";
 import { Table } from "react-bootstrap";
 import Header from "../shared/Header/Header";
 import Footer from "../shared/footer/Footer";
+import Helmet from "react-helmet";
 
 const Pricing = () => {
   return (
     <section>
+      {/* makeing seo */}
+      <Helmet>
+        <title>Pricing </title>
+        <meta name="description" content="Pricing page" />
+      </Helmet>
+      {/* seo ends  */}
       <Header />
       <div className="md:w-9/12 w-11/12 mx-auto py-5 ">
         <div className="free-table">

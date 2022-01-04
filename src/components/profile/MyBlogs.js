@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import useAuth from "../../hooks/useAuth";
 import Footer from "../shared/footer/Footer";
 import Header from "../shared/Header/Header";
@@ -9,6 +10,12 @@ const MyBlogs = () => {
   const userBlogs = blogs.filter((blog) => blog?.email === currentUser?.email);
   return (
     <section>
+      {/* makeing seo */}
+      <Helmet>
+        <title>My Blogs</title>
+        <meta name="description" content="My blogs page" />
+      </Helmet>
+      {/* seo ends  */}
       <Header />
       <div className="md:w-9/12 w-11/12 mx-auto py-10">
         <span className="text-2xl font-bold py-2">My Blogs</span>

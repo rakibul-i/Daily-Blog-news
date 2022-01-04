@@ -6,6 +6,7 @@ import axios from "axios";
 import Footer from "../shared/footer/Footer";
 import { useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
+import Helmet from "react-helmet";
 
 const WriteBlog = () => {
   const { currentUser } = useAuth();
@@ -56,6 +57,12 @@ const WriteBlog = () => {
 
   return (
     <section>
+      {/* makeing seo */}
+      <Helmet>
+        <title>Write Blog</title>
+        <meta name="description" content="My blogs page" />
+      </Helmet>
+      {/* seo ends  */}
       <Header />
       <div className="md:w-9/12 w-11/12 mx-auto py-4 px-3 my-3 border">
         <h3> {"Blogs > Blog Post"}</h3>

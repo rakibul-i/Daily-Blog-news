@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import Helmet from "react-helmet";
 import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Footer from "../shared/footer/Footer";
@@ -17,6 +18,12 @@ const BlogDetails = () => {
 
   return (
     <>
+      {/* makeing seo */}
+      <Helmet>
+        <title>Blog details </title>
+        <meta name="description" content="Blog details page" />
+      </Helmet>
+      {/* seo ends  */}
       <Header />
       <section className="lg:w-7/12 md:w-9/12 w-11/12 mx-auto py-5 ">
         <h1 className="text-center py-4 font-bold">{blog?.title}</h1>
