@@ -14,7 +14,7 @@ const BlogDetails = () => {
   const blog = blogs.find((b) => b._id === id);
   const time = blog?.time;
 
-  const blogComments = comments.data.filter((c) => c.blogId === id);
+  const blogComments = comments?.data?.filter((c) => c.blogId === id);
 
   return (
     <>
@@ -37,7 +37,7 @@ const BlogDetails = () => {
 
         {/* add a comment  */}
         <div className="border py-4 px-2">
-          <h3> {blogComments.length} Comments</h3>
+          <h3> {blogComments?.length} Comments</h3>
           <MakeComment id={id}></MakeComment>
           {/* comments  */}
           <div className="py-3 px-2">
