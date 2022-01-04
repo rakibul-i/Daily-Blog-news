@@ -1,0 +1,155 @@
+/*--------------------
+  css design starts from here
+---------------------- */
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  height: 250px;
+  color: white;
+  cursor: pointer;
+}
+
+.feature-icon-design {
+  font-size: 70px;
+  color: white;
+  display: block;
+}
+
+.feature-title {
+  font-size: 30px;
+  display: block;
+}
+
+.feature-desc {
+  display: block;
+}
+
+.feature:hover {
+  background: rgba(150, 111, 111, 0.692);
+}
+
+/* write part start here */
+.write {
+  background-image: linear-gradient(
+      rgba(241, 7, 7, 0.664),
+      rgba(242, 0, 0, 0.815),
+      rgba(255, 0, 0, 0.836),
+      rgba(226, 9, 9, 0.856)
+    ),
+    url("https://i.ibb.co/h9mzfsk/read.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.write:hover .feature-icon-design {
+  display: none;
+}
+
+.write:hover .feature-desc {
+  display: none;
+}
+
+.write:hover .feature-title {
+  display: none;
+}
+
+/* write part end here */
+
+/* read part start here */
+
+.read {
+  background-image: linear-gradient(
+      rgba(10, 10, 10, 0.938),
+      rgba(8, 8, 8, 0.925),
+      rgba(15, 15, 15, 0.904),
+      rgba(7, 7, 7, 0.911)
+    ),
+    url("https://i.ibb.co/PYY05NR/make.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.read:hover .feature-icon-design {
+  display: none;
+}
+
+.read:hover .feature-desc {
+  display: none;
+}
+
+.read:hover .feature-title {
+  display: none;
+}
+
+/* read part end here */
+
+/* make part start here */
+
+.make {
+  background-image: linear-gradient(
+      rgba(58, 52, 52, 0.87),
+      rgba(53, 48, 48, 0.856),
+      rgba(51, 45, 45, 0.836),
+      rgba(51, 46, 46, 0.89)
+    ),
+    url("https://i.ibb.co/vqYCzCH/write.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.make:hover .feature-icon-design {
+  display: none;
+}
+
+.make:hover .feature-desc {
+  display: none;
+}
+
+.make:hover .feature-title {
+  display: none;
+}
+
+/*--------------------
+  Media Query for Mobile
+---------------------- */
+
+@media only screen and (max-width: 688px) {
+  .feature-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*--------------------
+  Media Query for Ipad
+---------------------- */
+
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+  .feature-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*--------------------
+  css design ends here
+---------------------- */

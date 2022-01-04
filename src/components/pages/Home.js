@@ -3,6 +3,7 @@ import Blogs from "../Blogs/Blogs";
 import RecentBlogs from "../Blogs/RecentBlogs";
 import Footer from "../shared/footer/Footer";
 import Header from "../shared/Header/Header";
+import Reviews from "../shared/Reviews";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <RecentBlogs />
       <Blogs />
+      <Reviews />
       <Footer />
     </div>
   );

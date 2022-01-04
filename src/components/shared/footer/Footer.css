@@ -7,7 +7,7 @@ Design Starts from here
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #000000;
+  background-color: #111;
   padding: 5px 0px;
   color: white;
 }
@@ -45,7 +45,7 @@ Design Starts from here
       rgba(0, 0, 0, 0.856),
       rgba(0, 0, 0, 0.815)
     ),
-    url("https://ibb.co/zV1GSGP");
+    url("https://i.ibb.co/RT1zCzQ/banner-1.jpg");
   background-size: cover;
   /* height:60vh; */
   background-position: center;

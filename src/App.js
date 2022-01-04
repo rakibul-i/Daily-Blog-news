@@ -13,6 +13,8 @@ import PrivateRoute from "./components/authentication/PrivateRoute";
 import MyBlogs from "./components/profile/MyBlogs";
 import AboutUs from "./components/pages/About";
 import Pricing from "./components/pages/Pricing";
+import Features from "./components/pages/Features";
+import Review from "./components/profile/Review";
 
 function App() {
   const { blogs } = useAuth();
@@ -31,6 +33,9 @@ function App() {
   return (
     <>
       <Switch>
+        <PrivateRoute path="/review">
+          <Review />
+        </PrivateRoute>
         <PrivateRoute path="/writeBlog">
           <WriteBlog />
         </PrivateRoute>
@@ -40,6 +45,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/blogs/:id" component={BlogDetails} />
+        <Route path="/features" component={Features} />
         <Route path="/pricing" component={Pricing} />
         <Route path="/about" component={AboutUs} />
         <Route path="/home" component={Home} />

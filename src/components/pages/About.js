@@ -14,7 +14,7 @@ const AboutUs = () => {
             {/* <img src={img} className="about-img" alt="" /> */}
             <img
               className="about-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcZsb4mRu78V4njYrlwY8L14Dl2tfIBxTwkYYvTo7d4wpr76PSfMpARU4phjRI6Ffb2LE&usqp=CAU"
+              src="https://i.ibb.co/LPjS5s3/photo-1455390582262-044cdead277a.jpg"
               alt=""
             />
           </div>
