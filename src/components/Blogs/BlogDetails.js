@@ -20,7 +20,7 @@ const BlogDetails = () => {
     <>
       {/* makeing seo */}
       <Helmet>
-        <title>Blog details </title>
+        <title>{blog?.title}</title>
         <meta name="description" content="Blog details page" />
       </Helmet>
       {/* seo ends  */}
